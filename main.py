@@ -31,5 +31,5 @@ while not finished:
         if event.type == pygame.QUIT:
             finished = True
 
-    # Limit game to 144fps
-    clock.tick(144)
+    # Limit game to 60fps
+    clock.tick(60)

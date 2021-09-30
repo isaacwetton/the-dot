@@ -46,5 +46,6 @@ while not finished:
     # Limit game to 60fps
     clock.tick(60)
 
+# Quit the program when the main game loop is exited
 pygame.quit()
 quit()

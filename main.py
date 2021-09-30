@@ -6,7 +6,8 @@ import math
 pygame.init()
 
 # Define any colours used
-DARK_GREY = (85, 85, 85)
+GREY = (85, 85, 85)
+DARK_GREY = (50, 50, 50)
 WHITE = (255, 255, 255)
 
 # Create pi constant from math
@@ -37,9 +38,9 @@ while not finished:
         if event.type == pygame.QUIT:
             finished = True
 
-    # Clear the screen to DARK_GREY
-    screen.fill(DARK_GREY)
-    
+    # Clear the screen to GREY with DARK_GREY border
+    screen.fill(GREY)
+    pygame.draw.rect(screen, DARK_GREY, [0, 0, pygameInfo.current_w, pygameInfo.current_h], 50)
     pygame.display.flip()
 
     # Limit game to 60fps

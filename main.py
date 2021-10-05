@@ -1,5 +1,4 @@
 # Import used modules
-import pygame
 import math
 
 # Import functions and classes from other modules within project
@@ -33,6 +32,13 @@ finished = False
 # Create clock
 clock = pygame.time.Clock()
 
+# Create sprite groups
+main_menu_list = pygame.sprite.Group()
+
+# Create main menu sprites
+title = MainMenuTitle(450, 100, (700, 500))
+main_menu_list.add(title)
+
 # --- MAIN MENU LOOP ---
 
 while main_menu:
@@ -45,6 +51,7 @@ while main_menu:
     # Clear the screen to GREY with DARK_GREY border
     screen.fill(GREY)
     pygame.draw.rect(screen, DARK_GREY, [0, 0, pygameInfo.current_w, pygameInfo.current_h], 50)
+    main_menu_list.draw(screen)
     pygame.display.flip()
 
     # Limit game to 60fps

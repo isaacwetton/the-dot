@@ -24,10 +24,28 @@ screen = pygame.display.set_mode((pygameInfo.current_w, pygameInfo.current_h))
 pygame.display.set_caption("The Dot")
 
 # Initialise quit condition
+main_menu = True
 finished = False
 
 # Create clock
 clock = pygame.time.Clock()
+
+# --- MAIN MENU LOOP ---
+
+while main_menu:
+    # Event loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            main_menu = False
+            finished = True
+
+    # Clear the screen to GREY with DARK_GREY border
+    screen.fill(GREY)
+    pygame.draw.rect(screen, DARK_GREY, [0, 0, pygameInfo.current_w, pygameInfo.current_h], 50)
+    pygame.display.flip()
+
+    # Limit game to 60fps
+    clock.tick(60)
 
 # --- MAIN PROGRAM LOOP ---
 

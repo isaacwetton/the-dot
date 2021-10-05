@@ -2,6 +2,9 @@
 import pygame
 import math
 
+# Import functions and classes from other modules within project
+from menusprites import *
+
 # Initialise pygame
 pygame.init()
 

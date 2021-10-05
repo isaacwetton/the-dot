@@ -4,6 +4,11 @@ Below are initial ideas for the game - based off a game I made with Scratch almo
 
 These are pre-development notes and are subject to significant change.
 
+### Style
+
+- Sprites, text and logos drawn digitally by hand.
+- Grey background with dark grey border.
+
 ### Player
 
 - Player plays as a purple dot, which is controllable via keyboard (and possibly controller?).

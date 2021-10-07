@@ -17,10 +17,12 @@ PI = math.pi
 
 # Create pygame info object
 pygameInfo = pygame.display.Info()
+screen_x = pygameInfo.current_w
+screen_y = pygameInfo.current_h
 
 # Create fullscreen game window
 # screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-screen = pygame.display.set_mode((pygameInfo.current_w, pygameInfo.current_h))
+screen = pygame.display.set_mode((screen_x, screen_y))
 
 # Set window title
 pygame.display.set_caption("The Dot")
@@ -36,7 +38,9 @@ clock = pygame.time.Clock()
 main_menu_list = pygame.sprite.Group()
 
 # Create main menu sprites
-title = MainMenuTitle(450, 100, (700, 500))
+title = MainMenuTitle(screen_x * 0.3,
+                      screen_y * 0.2,
+                      (int((screen_x * 0.4) // 1), int((screen_y * 0.35) // 1)))
 main_menu_list.add(title)
 
 # --- MAIN MENU LOOP ---

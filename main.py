@@ -41,7 +41,10 @@ main_menu_list = pygame.sprite.Group()
 title = MainMenuTitle(screen_x * 0.3,
                       screen_y * 0.2,
                       (int((screen_x * 0.4) // 1), int((screen_y * 0.35) // 1)))
-main_menu_list.add(title)
+playButton = MainMenuPlay(screen_x * 0.42,
+                          screen_y * 0.6,
+                          (int((screen_x * 0.2) // 1), int((screen_y * 0.1) // 1)))
+main_menu_list.add(title, playButton)
 
 # --- MAIN MENU LOOP ---
 
